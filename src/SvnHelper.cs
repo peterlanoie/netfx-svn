@@ -600,65 +600,6 @@ namespace Common.SVN
 			}
 		}
 
-		///// <summary>
-		///// Executes an SVN <paramref name="command"/> against the specified <paramref name="path"/>.
-		///// </summary>
-		///// <param name="path">Subversion path, local or repository.</param>
-		///// <param name="command">Command to execute.</param>
-		///// <returns></returns>
-		//private XmlDocument PathCommandToXml(string path, string command)
-		//{
-		//   return PathCommandToXml(path, command, null, null);
-		//}
-
-		///// <summary>
-		///// Executes an SVN <paramref name="command"/> against the specified <paramref name="path"/>.
-		///// </summary>
-		///// <param name="path">Subversion path, local or repository.</param>
-		///// <param name="command">Command to execute.</param>
-		///// <param name="user">Username to use for command, can be NULL.</param>
-		///// <param name="password">Password to use for command, can be NULL.</param>
-		///// <returns></returns>
-		//private XmlDocument PathCommandToXml(string path, string command, string user, string password)
-		//{
-		//   SvnCommandOptions options = _defaultOptions.Clone();
-		//   options.Username = user;
-		//   options.Password = password;
-		//   return _command.GetXml(command, path, options);
-		//}
-
-		/*
-		<?xml version="1.0"?>
-		<info>
-			 <entry kind="dir" path="CL.CCNet" revision="182">
-				  <url>svn://10.12.48.129/repo2/trunk/CL/CL.CCNet</url>
-				  <repository>
-						<root>svn://10.12.48.129/repo2</root>
-						<uuid>39d515a4-5754-c64f-a9f7-600a05dfe35c</uuid>
-				  </repository>
-				  <commit revision="48">
-						<author>planoie</author>
-						<date>2009-02-25T13:31:50.390625Z</date>
-				  </commit>
-			 </entry>
-		</info>
-		*/
-
-		/*
-		<?xml version="1.0"?>
-		<log>
-		  <logentry revision="13895">
-			 <author>dwahl</author>
-			 <date>2011-08-11T15:22:21.517750Z</date>
-			 <paths>
-				<path kind="" action="M">/CL/trunk/eCourse/CL.eCourses.XLTShell.BAL/QuizBL.cs</path>
-			 </paths>
-			 <msg>Task area report stuff for Quiztool</msg>
-		  </logentry>
-		</log>
-		*/
-
-
 		public List<SvnLogEntry> GetLog(SvnPath path)
 		{
 			return GetLog(path, Revision.HEAD, 100);
